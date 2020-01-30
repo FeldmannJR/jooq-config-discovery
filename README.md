@@ -24,9 +24,10 @@ public class JOOQGenerator extends JOOQGenerator {
     public String getSchema() {
         return "constellation_common";
     }
+
     @Override
-    protected String getDatabaseURL(String s) {
-        return "jdbc:mysql://localhost:3306/";
+    protected String getDatabaseURL(String schema) {
+        return "jdbc:mysql://localhost:3306/" + schema;
     }
 
     @Override
